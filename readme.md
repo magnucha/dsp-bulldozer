@@ -41,6 +41,9 @@ Thanks to runeranger, Madac, Veretragna, Narceen & Bem on Discord for helpful su
 
 ## Changelog
 
+#### v1.1.9
+Fix for new DSP release
+
 #### v1.1.8
 Bugfix: Fix button position when not in sandbox mode and for other tool categories
 
