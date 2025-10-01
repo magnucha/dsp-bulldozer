@@ -272,7 +272,7 @@ namespace Bulldozer
                 GameMain.localPlanet.factory.RenderLocalPlanetHeightmap();
             }
 
-            factory.planet.landPercentDirty = true;
+            factory.planet.landPercentDirtyFlag = true;
 
             if (!outOfSoilPile || PluginConfig.soilPileConsumption.Value != OperationMode.Honest)
             {
