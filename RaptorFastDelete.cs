@@ -75,9 +75,7 @@ namespace Bulldozer
                     if (powerCon.id != 0)
                     {
                         powerConRemoval[powerCon.networkId].Add(id);
-                        powerCon.SetEmpty();
-                        powerSystem.consumerRecycle[powerSystem.consumerRecycleCursor] = id;
-                        powerSystem.consumerRecycleCursor++;
+                        powerSystem.RemoveConsumerComponent(id);
                     }
                 }
 
@@ -140,11 +138,7 @@ namespace Bulldozer
                         takeBackCount[cargo.item] += cargo.stack;
                         takeBackInc[cargo.item] += cargo.inc;
 
-                        cargo.stack = 0;
-                        cargo.inc = 0;
-                        cargo.item = 0;
-                        cargoContainer.recycleIds[cargoContainer.recycleEnd & (cargoContainer.poolCapacity - 1)] = i;
-                        cargoContainer.recycleEnd++;
+                        cargoContainer.RemoveCargo(i);
                     }
                 }
 
@@ -168,8 +162,7 @@ namespace Bulldozer
                         cargoTraffic.RemoveBeltRenderer(i);
                         cargoTraffic.RemoveCargoPath(belt.segPathId);
                         belt.SetEmpty();
-                        cargoTraffic.beltRecycle[cargoTraffic.beltRecycleCursor] = i;
-                        cargoTraffic.beltRecycleCursor++;
+                        cargoTraffic.RemoveBeltComponent(i);
                     }
 
                     factory.RemoveEntityWithComponents(entityId, false);

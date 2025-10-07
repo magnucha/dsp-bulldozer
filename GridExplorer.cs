@@ -70,8 +70,10 @@ namespace Bulldozer
                         checkedDataPos.Add(reformTool.planet.data.QueryIndex(cursorPoint));
                     }
 
-                    var flattenTerrainReform = reformTool.factory.ComputeFlattenTerrainReform(snapArgs.points, center, radius, cursorPointCount);
-                    postComputeFn?.Invoke(snapArgs, center, radius, 10, flattenTerrainReform);
+                    var costSandCount = 0;
+                    var getSandCount = 0;
+                    reformTool.factory.ComputeFlattenTerrainReform(snapArgs.points, center, radius, cursorPointCount, ref costSandCount, ref getSandCount);
+                    postComputeFn?.Invoke(snapArgs, center, radius, 10, costSandCount);
 
                     if (stopwatch.ElapsedMilliseconds > maxExecutionMs)
                     {
