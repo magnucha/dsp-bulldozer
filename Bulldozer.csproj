@@ -52,7 +52,10 @@
         <None Remove="bulldozer.zip" />
     </ItemGroup>
     <ItemGroup>
+        <None Update="README.md" CopyToOutputDirectory="Always" />
+        <None Update="CHANGELOG.md" CopyToOutputDirectory="Always" />
         <None Update="manifest.json" CopyToOutputDirectory="Always" />
+        <None Update="icon.png" CopyToOutputDirectory="Always" />
     </ItemGroup>
     <ItemGroup>
       <Reference Include="0Harmony">
@@ -79,7 +82,11 @@
     </ItemGroup>
 
     <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-        <Exec Command="xcopy /y /d  &quot;$(TargetDir)\*&quot; &quot;C:\Users\Magnus\AppData\Roaming\r2modmanPlus-local\DysonSphereProgram\profiles\Default\BepInEx\plugins\Semar-Bulldozer\&quot;&#xD;&#xA;&#xD;&#xA;" />
+        <Exec Command="xcopy /y  &quot;$(TargetDir)Bulldozer.dll&quot; &quot;C:\Users\Magnus\AppData\Roaming\r2modmanPlus-local\DysonSphereProgram\profiles\Default\BepInEx\plugins\Semar-Bulldozer\&quot;&#xD;&#xA;&#xD;&#xA;" />
+        <Exec Command="xcopy /y  &quot;$(TargetDir)\manifest.json&quot; &quot;C:\Users\Magnus\AppData\Roaming\r2modmanPlus-local\DysonSphereProgram\profiles\Default\BepInEx\plugins\Semar-Bulldozer\&quot;&#xD;&#xA;&#xD;&#xA;" />
+        <Exec Command="xcopy /y  &quot;$(TargetDir)\CHANGELOG.md&quot; &quot;C:\Users\Magnus\AppData\Roaming\r2modmanPlus-local\DysonSphereProgram\profiles\Default\BepInEx\plugins\Semar-Bulldozer\&quot;&#xD;&#xA;&#xD;&#xA;" />
+        <Exec Command="xcopy /y  &quot;$(TargetDir)\README.md&quot; &quot;C:\Users\Magnus\AppData\Roaming\r2modmanPlus-local\DysonSphereProgram\profiles\Default\BepInEx\plugins\Semar-Bulldozer\&quot;&#xD;&#xA;&#xD;&#xA;" />
+        <Exec Command="xcopy /y  &quot;$(TargetDir)\icon.png&quot; &quot;C:\Users\Magnus\AppData\Roaming\r2modmanPlus-local\DysonSphereProgram\profiles\Default\BepInEx\plugins\Semar-Bulldozer\&quot;&#xD;&#xA;&#xD;&#xA;" />
     </Target>
 
 </Project>
