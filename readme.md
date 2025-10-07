@@ -37,9 +37,14 @@ Click the `Install with Mod Manager` link above.
 
 ## Acknowledgements
 
+Mod originally developed by Semar. This version is a fork with some small compatibility updates.
+
 Thanks to runeranger, Madac, Veretragna, Narceen & Bem on Discord for helpful suggestions and bug reports.
 
 ## Changelog
+
+#### v1.1.10
+Fix compatability with the DSP multithreading update (0.10.33.26934)
 
 #### v1.1.9
 Fix for new DSP release

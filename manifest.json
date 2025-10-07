@@ -1,9 +1,7 @@
 {
     "name":  "Bulldozer",
-    "version_number":  "1.1.9",
-    "website_url":  "https://github.com/jimmieclark3/dsp-bulldozer",
+    "version_number":  "1.1.10",
+    "website_url":  "https://github.com/magnucha/dsp-bulldozer",
     "description":  "Quickly pave an entire planet. Supports adding painted markings at various locations (equator, tropics, meridians). Also has ability to bulldoze existing factory machines",
-    "dependencies":  [
-                         "xiaoye97-BepInEx-5.4.5"
-                     ]
+    "dependencies": [ "xiaoye97-BepInEx-5.4.17" ]
 }
